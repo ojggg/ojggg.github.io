@@ -6,7 +6,7 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const description = "백엔드와 서버 작업을 적는 기술 블로그.";
+const description = "👨‍💻";
 ---
 
 <Base title="JeongKeepsCalm" description={description}>
@@ -37,7 +37,7 @@ const description = "백엔드와 서버 작업을 적는 기술 블로그.";
       </ul>
     )
   }
-  <p class="empty-search" hidden>이 제목의 글이 없다.</p>
+  <p class="empty-search" hidden>No posts.</p>
   <!--/* anchor: blog-index-pagination */-->
   <nav class="page-nav" aria-label="글 목록 쪽" hidden>
     <button type="button" data-page="prev">이전</button>
