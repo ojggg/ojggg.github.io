@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const canonical = new URL(`/posts/${post.id}/`, Astro.site).href;
+---
+
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  canonical={canonical}
+  ogType="article"
+>
+  <article>
+    <time
+      class="font-mono text-xs tracking-wide text-zinc-500"
+      datetime={post.data.pubDate.toISOString()}
+    >
+      {post.data.pubDate.toISOString().slice(0, 10)}
+    </time>
+    <div
+      class="prose prose-stone mt-4 max-w-[65ch] prose-headings:font-[family-name:var(--font-display)] prose-headings:tracking-tight prose-a:text-accent prose-pre:bg-zinc-900"
+    >
+      <Content />
+    </div>
+  </article>
+</Base>
