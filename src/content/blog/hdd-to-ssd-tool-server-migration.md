@@ -16,13 +16,13 @@ pubDate: 2026-10-07
 
 재설치 없이 HDD 내용을 SSD로 복사한 뒤 SSD로 켜지게 바꾼다. 지워지는 것은 SSD 안의 예전 시스템뿐이다. HDD 파일은 지우지 않는다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">HDD</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">원판이 돌아가며 데이터를 담는 디스크.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">SSD</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">원판 없이 데이터를 담는 디스크.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">UEFI</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">전원을 켠 직후, 어떤 디스크로 켤지 고르는 방식.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">보안 부팅</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">부팅 파일이 서명되었는지 확인하는 기능. 이 서버에서는 꺼져 있다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">컨테이너</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">저장소, 이슈 추적, 코드 품질, 위키처럼 서비스를 나눠 띄우는 실행 상자.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">HDD</span> : 원판이 돌아가며 데이터를 담는 디스크.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">SSD</span> : 원판 없이 데이터를 담는 디스크.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">UEFI</span> : 전원을 켠 직후, 어떤 디스크로 켤지 고르는 방식.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">보안 부팅</span> : 부팅 파일이 서명되었는지 확인하는 기능. 이 서버에서는 꺼져 있다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">컨테이너</span> : 저장소, 이슈 추적, 코드 품질, 위키처럼 서비스를 나눠 띄우는 실행 상자.</p>
 </div>
 
 <br>
@@ -38,11 +38,11 @@ pubDate: 2026-10-07
 7. 세션을 다시 열고 서비스를 켠다. 이미 떠 있는 컨테이너는 건너뛴다.
 8. SSD로 떴는지와 데이터를 확인한다. 실패하면 평소 부팅은 바꾸지 않는다. 통과한 뒤에만 SSD를 기본으로 고정할지 묻는다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">세션</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">접속이 끊겨도 서버에서 작업을 이어서 두는 화면.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">파일시스템</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">디스크 구역을 파일로 쓸 수 있게 만드는 형식.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">기본 부팅</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">메뉴에서 고르지 않아도 전원을 켤 때 먼저 선택되는 디스크.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">세션</span> : 접속이 끊겨도 서버에서 작업을 이어서 두는 화면.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">파일시스템</span> : 디스크 구역을 파일로 쓸 수 있게 만드는 형식.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">기본 부팅</span> : 메뉴에서 고르지 않아도 전원을 켤 때 먼저 선택되는 디스크.</p>
 </div>
 
 <br>
@@ -53,11 +53,11 @@ pubDate: 2026-10-07
 
 장치 이름 순서가 아니라 모델명과 회전 여부로 HDD와 SSD를 하나씩 찾는다. 지금 켜진 디스크가 {HDD모델}일 때만 복사와 부팅 설정을 한다. SSD가 이미 켜진 디스크이거나, SSD 첫 구역의 식별자가 예상과 다르면 중단한다. 복사와 부팅에 필요한 명령이 없어도 확인 단계에서 멈춘다. 디스크 상태 점검이 가능하면 통과일 때만 진행한다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">모델명</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">디스크 제품 이름. 연결 순서가 바뀌어도 같은 디스크를 찾는다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">회전 여부</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">원판이 도는 디스크인지. 돌지 않으면 SSD, 돌면 HDD로 본다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">식별자</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">디스크 구역을 구분하는 번호. 예상과 다르면 다른 디스크로 보고 멈춘다.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">모델명</span> : 디스크 제품 이름. 연결 순서가 바뀌어도 같은 디스크를 찾는다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">회전 여부</span> : 원판이 도는 디스크인지. 돌지 않으면 SSD, 돌면 HDD로 본다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">식별자</span> : 디스크 구역을 구분하는 번호. 예상과 다르면 다른 디스크로 보고 멈춘다.</p>
 </div>
 
 <br>
@@ -70,10 +70,10 @@ pubDate: 2026-10-07
 
 복사에서 빼는 곳은 실행 중에만 있는 자리, 다른 디스크를 붙이는 자리, 새 파일시스템이 직접 만드는 자리, 사용 중인 예비 메모리 파일, HDD 부팅 구역, 보관용 부팅 목록이다. 이미 새 파일시스템이면 비우지 않고 이어서 복사한다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">예약 작업</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">정해진 시각이나 주기로 파일을 건드릴 수 있는 일. 복사 중에는 끄고, 서비스를 켤 때 다시 켠다. 빌드를 다시 띄우는 예약도 여기 포함된다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">맞추기</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">원본에 없는 파일을 복사 대상에서 지워 양쪽을 같게 하는 일. 지우는 쪽은 SSD다.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">예약 작업</span> : 정해진 시각이나 주기로 파일을 건드릴 수 있는 일. 복사 중에는 끄고, 서비스를 켤 때 다시 켠다. 빌드를 다시 띄우는 예약도 여기 포함된다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">맞추기</span> : 원본에 없는 파일을 복사 대상에서 지워 양쪽을 같게 하는 일. 지우는 쪽은 SSD다.</p>
 </div>
 
 <br>
@@ -82,10 +82,10 @@ pubDate: 2026-10-07
 
 SSD에 예전 24.04가 있으면 대상 디스크를 보여 주고 `초기화`를 입력해야 파일시스템을 새로 만든다. 나눈 구역의 표는 유지해서, 펌웨어에 있는 SSD 부팅 항목이 그대로 유효하다. 대상이 지금 켜진 디스크이면 만들지 않고 중단한다. 새 파일시스템이 이미 있으면 이 단계는 건너뛴다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">초기화</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">SSD만 비우고 파일시스템을 다시 만들겠다는 확인 입력. 다른 글자를 넣으면 아무것도 바꾸지 않고 멈춘다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">펌웨어</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">운영체제보다 먼저 실행되어, 어떤 디스크로 켤지 고르는 프로그램.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">초기화</span> : SSD만 비우고 파일시스템을 다시 만들겠다는 확인 입력. 다른 글자를 넣으면 아무것도 바꾸지 않고 멈춘다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">펌웨어</span> : 운영체제보다 먼저 실행되어, 어떤 디스크로 켤지 고르는 프로그램.</p>
 </div>
 
 <br>
@@ -98,12 +98,12 @@ SSD 안에는 기존 목록의 보관본, SSD 식별자로 다시 쓴 목록, 8G
 
 SSD로 켜지다 멈추면 전원을 껐다 켠다. 평소 순서가 HDD이므로 HDD로 돌아온다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">부팅 목록</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">켤 때 어떤 디스크를 어디에 붙일지 적어 둔 파일.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">예비 메모리 파일</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">메모리가 부족할 때 디스크를 메모리처럼 쓰는 파일. SSD에는 8GB를 새로 만든다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">커널</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">운영체제의 핵심. 이 서버는 재부팅하면 기본 커널이 7.0.0-30에서 7.0.0-34로 바뀔 수 있다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">다음 한 번</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">바로 다음 부팅에만 지정한 디스크로 켜지고, 그 뒤에는 평소 순서로 돌아가는 예약.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">부팅 목록</span> : 켤 때 어떤 디스크를 어디에 붙일지 적어 둔 파일.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">예비 메모리 파일</span> : 메모리가 부족할 때 디스크를 메모리처럼 쓰는 파일. SSD에는 8GB를 새로 만든다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">커널</span> : 운영체제의 핵심. 이 서버는 재부팅하면 기본 커널이 7.0.0-30에서 7.0.0-34로 바뀔 수 있다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">다음 한 번</span> : 바로 다음 부팅에만 지정한 디스크로 켜지고, 그 뒤에는 평소 순서로 돌아가는 예약.</p>
 </div>
 
 <br>
@@ -116,10 +116,10 @@ SSD로 켜지다 멈추면 전원을 껐다 켠다. 평소 순서가 HDD이므�
 
 서비스를 다시 켤 때는 저장소가 정상 표시가 될 때까지 최대 10분 기다린다. 빌드는 {계정정보}로 기동 스크립트를 실행한다. 로그는 실행할 때마다 새로 쓰므로, 시작 전에 이전 로그를 남긴다. 재부팅 직후 컨테이너는 이미 떠 있을 수 있어, 떠 있는 것은 건너뛴다. HDD로 켜진 상태에서 SSD 다음 부팅 예약이 남아 있으면 그 예약을 취소한다. 예약을 둔 채 HDD에서 서비스를 켜면 SSD 복사본이 오래된 상태가 되기 때문이다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">정상 표시</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">저장소 컨테이너가 준비되었다고 스스로 알리는 상태. 이 표시 전에는 확인을 통과하지 않는다.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">기동 스크립트</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">빌드를 시스템 서비스 대신 계정으로 직접 띄우는 명령. 로그를 매번 새로 쓴다.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">정상 표시</span> : 저장소 컨테이너가 준비되었다고 스스로 알리는 상태. 이 표시 전에는 확인을 통과하지 않는다.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">기동 스크립트</span> : 빌드를 시스템 서비스 대신 계정으로 직접 띄우는 명령. 로그를 매번 새로 쓴다.</p>
 </div>
 
 <br>
@@ -135,10 +135,10 @@ tmux new -s ssd
 
 작업 파일은 {작업디렉터리}에 둔다. 접속이 끊기면 다시 들어와 같은 세션에 붙는다. 세션 이름이 이미 있으면 새로 만들지 않고 붙는다. 재부팅하면 세션이 사라지므로 다시 만든다.
 
-<div style="margin:1.75rem 0 2rem;padding:0.15rem 0;background:#fafaf9;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;">
-<p style="margin:0.85rem 0 0.15rem;font-size:11px;letter-spacing:0.18em;font-weight:650;color:#1f7a5c;">이 말의 뜻</p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">관리자 권한</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">디스크를 바꾸고 부팅 순서를 고칠 수 있는 권한.</span></p>
-<p style="margin:0;padding:0.72rem 0;border-top:1px solid #e7e5e4;"><span style="display:block;font-weight:650;letter-spacing:-0.015em;color:#1c1917;">tmux</span><span style="display:block;margin-top:0.18rem;color:#57534e;line-height:1.65;">세션을 만들고 다시 붙는 프로그램. 서버에는 이미 설치되어 있다.</span></p>
+<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
+<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">관리자 권한</span> : 디스크를 바꾸고 부팅 순서를 고칠 수 있는 권한.</p>
+<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">tmux</span> : 세션을 만들고 다시 붙는 프로그램. 서버에는 이미 설치되어 있다.</p>
 </div>
 
 <br>
