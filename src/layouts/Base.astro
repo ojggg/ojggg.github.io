@@ -43,11 +43,24 @@ const fullTitle = title === "JeongKeepsCalm" ? title : `${title} · JeongKeepsCa
     <div class="page-shell">
       <header class="site-header">
         <a href="/" class="display wordmark">JeongKeepsCalm</a>
-        {
-          ogType === "article" && (
-            <a href="/" class="index-link">글</a>
-          )
-        }
+        <!--/* anchor: header-title-search */-->
+        <div class="header-tools">
+          <form class="title-search" action="/" method="get" role="search">
+            <label for="title-query">제목</label>
+            <input
+              id="title-query"
+              name="q"
+              type="search"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+          </form>
+          {
+            ogType === "article" && (
+              <a href="/" class="index-link">글</a>
+            )
+          }
+        </div>
       </header>
       <main class="site-main">
         <slot />

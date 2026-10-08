@@ -21,7 +21,7 @@ const description = "백엔드와 서버 작업을 적는 기술 블로그.";
     ) : (
       <ul class="post-list">
         {posts.map((post, index) => (
-          <li class="post-item" style={`--i: ${index}`}>
+          <li class="post-item" data-title={post.data.title} style={`--i: ${index}`}>
             <time
               class="post-date"
               datetime={post.data.pubDate.toISOString()}
@@ -37,4 +37,83 @@ const description = "백엔드와 서버 작업을 적는 기술 블로그.";
       </ul>
     )
   }
+  <p class="empty-search" hidden>이 제목의 글이 없다.</p>
+  <!--/* anchor: blog-index-pagination */-->
+  <nav class="page-nav" aria-label="글 목록 쪽" hidden>
+    <button type="button" data-page="prev">이전</button>
+    <span class="page-status">1 / 1</span>
+    <button type="button" data-page="next">다음</button>
+  </nav>
+  <script>
+    import { PAGE_SIZE, matchTitle, pageOf } from "../lib/list-page";
+
+    const form = document.querySelector(".title-search");
+    const input = document.querySelector("#title-query");
+    const list = document.querySelector(".post-list");
+    const emptySearch = document.querySelector(".empty-search");
+    const nav = document.querySelector(".page-nav");
+    const status = document.querySelector(".page-status");
+    const prev = document.querySelector("[data-page='prev']");
+    const next = document.querySelector("[data-page='next']");
+    const items = [...document.querySelectorAll(".post-item")];
+
+    if (form instanceof HTMLFormElement && input instanceof HTMLInputElement && list && nav && status && prev instanceof HTMLButtonElement && next instanceof HTMLButtonElement && emptySearch instanceof HTMLElement) {
+      let page = 1;
+
+      const render = () => {
+        const matched = items.filter((item) =>
+          matchTitle(item.dataset.title ?? "", input.value),
+        );
+        const view = pageOf(matched, page);
+        page = view.page;
+        const visible = new Set(view.items);
+        for (const item of items) {
+          item.classList.toggle("is-hidden", !visible.has(item));
+        }
+        list.hidden = matched.length === 0;
+        emptySearch.hidden = matched.length > 0;
+        nav.hidden = matched.length <= PAGE_SIZE;
+        status.textContent = `${view.page} / ${view.pages}`;
+        prev.disabled = view.page <= 1;
+        next.disabled = view.page >= view.pages;
+
+        const url = new URL(window.location.href);
+        const query = input.value.trim();
+        if (query.length > 0) {
+          url.searchParams.set("q", query);
+        } else {
+          url.searchParams.delete("q");
+        }
+        if (view.page > 1) {
+          url.searchParams.set("page", String(view.page));
+        } else {
+          url.searchParams.delete("page");
+        }
+        window.history.replaceState(null, "", url);
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      input.value = params.get("q") ?? "";
+      page = Number(params.get("page")) || 1;
+      render();
+
+      input.addEventListener("input", () => {
+        page = 1;
+        render();
+      });
+      prev.addEventListener("click", () => {
+        page -= 1;
+        render();
+      });
+      next.addEventListener("click", () => {
+        page += 1;
+        render();
+      });
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        page = 1;
+        render();
+      });
+    }
+  </script>
 </Base>
