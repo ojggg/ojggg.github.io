@@ -39,15 +39,17 @@ const fullTitle = title === "JeongKeepsCalm" ? title : `${title} · JeongKeepsCa
     <!-- naver-site-verification: content 값은 서치어드바이저에서 받은 토큰으로 채운다 -->
     <link rel="icon" href="/favicon.svg" />
   </head>
-  <body class="min-h-dvh bg-paper text-ink antialiased">
-    <div class="mx-auto max-w-3xl px-6">
+  <body class="min-h-dvh antialiased">
+    <div class="page-shell">
       <header class="site-header">
-        <a href="/" class="display text-base tracking-tight text-strong">JeongKeepsCalm</a>
-        {ogType === "article" && (
-          <a href="/" class="text-sm text-muted hover:text-accent">글</a>
-        )}
+        <a href="/" class="display wordmark">JeongKeepsCalm</a>
+        {
+          ogType === "article" && (
+            <a href="/" class="index-link">글</a>
+          )
+        }
       </header>
-      <main class="pt-14">
+      <main class="site-main">
         <slot />
       </main>
       <footer class="site-footer">JeongKeepsCalm</footer>

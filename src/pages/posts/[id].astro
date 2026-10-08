@@ -13,6 +13,20 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const canonical = new URL(`/posts/${post.id}/`, Astro.site).href;
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const currentIndex = posts.findIndex((item) => item.id === post.id);
+const newer = currentIndex > 0 ? posts[currentIndex - 1] : undefined;
+const older =
+  currentIndex >= 0 && currentIndex < posts.length - 1
+    ? posts[currentIndex + 1]
+    : undefined;
+
+function formatDate(date: Date) {
+  return date.toISOString().slice(0, 10);
+}
 ---
 
 <Base
@@ -21,15 +35,44 @@ const canonical = new URL(`/posts/${post.id}/`, Astro.site).href;
   canonical={canonical}
   ogType="article"
 >
+  <!--/* anchor: article-read-progress */-->
+  <div class="read-progress" aria-hidden="true"></div>
   <article>
-    <time
-      class="font-mono text-xs tracking-[0.14em] text-muted"
-      datetime={post.data.pubDate.toISOString()}
-    >
-      {post.data.pubDate.toISOString().slice(0, 10)}
-    </time>
-    <div class="prose mt-8 max-w-[65ch]">
+    <header class="article-head">
+      <time class="article-date" datetime={post.data.pubDate.toISOString()}>
+        {formatDate(post.data.pubDate)}
+      </time>
+      <h1 class="display article-title">{post.data.title}</h1>
+      <p class="article-dek">{post.data.description}</p>
+    </header>
+    <div class="prose article-body">
       <Content />
     </div>
+    <!--/* anchor: article-adjacent-posts */-->
+    <nav class="article-nav" aria-label="다른 글">
+      {
+        (older || newer) && (
+          <div class="post-pager">
+            {older && (
+              <a class="pager-link" href={`/posts/${older.id}/`}>
+                <time datetime={older.data.pubDate.toISOString()}>
+                  {formatDate(older.data.pubDate)}
+                </time>
+                <span class="pager-title display">{older.data.title}</span>
+              </a>
+            )}
+            {newer && (
+              <a class="pager-link pager-newer" href={`/posts/${newer.id}/`}>
+                <time datetime={newer.data.pubDate.toISOString()}>
+                  {formatDate(newer.data.pubDate)}
+                </time>
+                <span class="pager-title display">{newer.data.title}</span>
+              </a>
+            )}
+          </div>
+        )
+      }
+      <a class="back-index" href="/">글</a>
+    </nav>
   </article>
 </Base>
