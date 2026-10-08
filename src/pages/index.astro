@@ -10,24 +10,24 @@ const description = "백엔드와 서버 작업을 적는 기술 블로그.";
 ---
 
 <Base title="JeongKeepsCalm" description={description}>
-  <h1 class="display text-4xl tracking-tight text-zinc-900 md:text-6xl">글</h1>
-  <p class="mt-4 max-w-[65ch] leading-relaxed text-zinc-600">{description}</p>
-  <ul class="post-list mt-14 divide-y divide-line">
+  <h1 class="display text-3xl tracking-tight text-strong md:text-4xl">글</h1>
+  <p class="mt-4 max-w-[65ch] leading-relaxed text-ink">{description}</p>
+  <ul class="post-list mt-12 divide-y divide-line">
     {
       posts.map((post) => (
-        <li class="py-8">
+        <li>
           <time
-            class="font-mono text-xs tracking-wide text-zinc-500"
+            class="font-mono text-xs tracking-[0.14em] text-muted"
             datetime={post.data.pubDate.toISOString()}
           >
             {post.data.pubDate.toISOString().slice(0, 10)}
           </time>
-          <a href={`/posts/${post.id}/`} class="mt-2 block">
-            <span class="display text-2xl tracking-tight text-zinc-900 md:text-3xl">
+          <a href={`/posts/${post.id}/`} class="mt-3 block">
+            <span class="display text-2xl tracking-tight text-strong md:text-[1.75rem]">
               {post.data.title}
             </span>
           </a>
-          <p class="mt-3 max-w-[65ch] leading-relaxed text-zinc-600">{post.data.description}</p>
+          <p class="mt-3 max-w-[65ch] leading-relaxed text-muted">{post.data.description}</p>
         </li>
       ))
     }

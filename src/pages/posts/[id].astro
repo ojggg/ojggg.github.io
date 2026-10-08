@@ -23,14 +23,12 @@ const canonical = new URL(`/posts/${post.id}/`, Astro.site).href;
 >
   <article>
     <time
-      class="font-mono text-xs tracking-wide text-zinc-500"
+      class="font-mono text-xs tracking-[0.14em] text-muted"
       datetime={post.data.pubDate.toISOString()}
     >
       {post.data.pubDate.toISOString().slice(0, 10)}
     </time>
-    <div
-      class="prose prose-stone mt-4 max-w-[65ch] prose-headings:font-[family-name:var(--font-display)] prose-headings:tracking-tight prose-a:text-accent prose-pre:bg-zinc-900"
-    >
+    <div class="prose mt-8 max-w-[65ch]">
       <Content />
     </div>
   </article>
