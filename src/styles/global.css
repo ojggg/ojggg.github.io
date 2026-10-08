@@ -306,8 +306,8 @@ a:focus-visible {
   --tw-prose-counters: var(--color-muted);
   --tw-prose-bullets: var(--color-muted);
   --tw-prose-hr: var(--color-line);
-  --tw-prose-quotes: var(--color-ink);
-  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-quotes: var(--color-strong);
+  --tw-prose-quote-borders: var(--color-strong);
   --tw-prose-captions: var(--color-muted);
   --tw-prose-code: var(--color-strong);
   --tw-prose-pre-code: #fafaf9;
@@ -347,6 +347,11 @@ a:focus-visible {
 .prose :where(blockquote) {
   font-style: normal;
   font-weight: 400;
+}
+
+.prose :where(blockquote p) {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 .prose.article-body {

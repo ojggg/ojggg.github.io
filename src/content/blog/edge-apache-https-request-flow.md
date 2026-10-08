@@ -16,15 +16,19 @@ pubDate: 2026-10-08
 
 대표 도메인과 그 별칭의 홈페이지만 엣지에서 정적 파일로 응답한다. 나머지 이름은 원래 `Host`를 유지한 채 뒤로 전달한다.
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">엣지</span> : 바깥에서 들어온 요청을 가장 먼저 받는 서버.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">아파치</span> : 웹 요청을 받아서, 직접 응답하거나 뒤 서버로 넘기는 프로그램.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">80</span> : 주소 앞에 자물쇠가 없는 일반 접속이 들어오는 문.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">443</span> : 주소가 https인 암호화 접속이 들어오는 문.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">별칭</span> : 본 이름 외에, 같은 사이트를 가리키도록 적어 둔 다른 이름.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">Host</span> : 브라우저가 어느 사이트에 접속하는지 알려 주는 이름.</p>
-</div>
+> keyword
+>
+> 엣지 : 바깥에서 들어온 요청을 가장 먼저 받는 서버.
+>
+> 아파치 : 웹 요청을 받아서, 직접 응답하거나 뒤 서버로 넘기는 프로그램.
+>
+> 80 : 주소 앞에 자물쇠가 없는 일반 접속이 들어오는 문.
+>
+> 443 : 주소가 https인 암호화 접속이 들어오는 문.
+>
+> 별칭 : 본 이름 외에, 같은 사이트를 가리키도록 적어 둔 다른 이름.
+>
+> Host : 브라우저가 어느 사이트에 접속하는지 알려 주는 이름.
 
 <br>
 
@@ -50,14 +54,17 @@ flowchart LR
   backends --> pub["{퍼블서버}"]
 ```
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">호스트 이름</span> : 주소에서 www나 서비스 이름처럼, 어느 사이트인지 구분하는 부분.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">영구 이동</span> : 브라우저에게 앞으로는 새 주소로 가라고 고정해서 알리는 응답.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">인증서</span> : 이 접속의 이름이 맞다는 것을 보여 주는 전자 증명.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">TLS</span> : 오가는 내용을 암호화하는 통신 방식. HTTPS가 이 방식을 쓴다.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">프록시</span> : 요청을 받아서 정해진 뒤 서버로 대신 전달하는 역할.</p>
-</div>
+> keyword
+>
+> 호스트 이름 : 주소에서 www나 서비스 이름처럼, 어느 사이트인지 구분하는 부분.
+>
+> 영구 이동 : 브라우저에게 앞으로는 새 주소로 가라고 고정해서 알리는 응답.
+>
+> 인증서 : 이 접속의 이름이 맞다는 것을 보여 주는 전자 증명.
+>
+> TLS : 오가는 내용을 암호화하는 통신 방식. HTTPS가 이 방식을 쓴다.
+>
+> 프록시 : 요청을 받아서 정해진 뒤 서버로 대신 전달하는 역할.
 
 <br>
 
@@ -69,12 +76,13 @@ flowchart LR
 
 공통으로 HSTS와 콘텐츠 타입, 프레임, 리퍼러, 기능 제한 헤더를 붙인다. 콘텐츠 보안 정책은 대표 홈페이지에만 있다. 서버 제품 문구는 비우고, 보안 규칙 엔진은 꺼져 있다.
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">HSTS</span> : 브라우저에게 다음부터는 암호화된 주소로만 접속하라고 알리는 표시.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">콘텐츠 보안 정책</span> : 페이지가 그림, 글꼴, 스크립트를 어디에서 가져올 수 있는지 제한하는 규칙.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">보안 규칙 엔진</span> : 의심스러운 요청을 검사하는 기능. 이 서버에서는 그 검사를 끄고, 서버 이름 문구만 비운다.</p>
-</div>
+> keyword
+>
+> HSTS : 브라우저에게 다음부터는 암호화된 주소로만 접속하라고 알리는 표시.
+>
+> 콘텐츠 보안 정책 : 페이지가 그림, 글꼴, 스크립트를 어디에서 가져올 수 있는지 제한하는 규칙.
+>
+> 보안 규칙 엔진 : 의심스러운 요청을 검사하는 기능. 이 서버에서는 그 검사를 끄고, 서버 이름 문구만 비운다.
 
 <br>
 
@@ -82,12 +90,13 @@ flowchart LR
 
 대표 도메인과 별칭은 뒤로 넘기지 않는다. 엣지의 정적 파일을 `GET`과 `HEAD`로만 보여 준다.
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">정적 파일</span> : 요청마다 새로 만들지 않고, 이미 있는 파일을 그대로 주는 페이지.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">GET</span> : 페이지 내용을 보여 달라는 읽기 요청.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">HEAD</span> : 내용은 받지 않고, 그 페이지가 있는지만 묻는 요청.</p>
-</div>
+> keyword
+>
+> 정적 파일 : 요청마다 새로 만들지 않고, 이미 있는 파일을 그대로 주는 페이지.
+>
+> GET : 페이지 내용을 보여 달라는 읽기 요청.
+>
+> HEAD : 내용은 받지 않고, 그 페이지가 있는지만 묻는 요청.
 
 <br>
 
@@ -103,13 +112,15 @@ flowchart LR
 
 위키와 CI는 80에서도 바로 뒤로 넘긴다. 나머지는 80에서 HTTPS로 보낸 다음 443이 전달한다.
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">CI</span> : 코드를 올리면 검사나 배포를 자동으로 이어서 하는 도구.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">포트</span> : 한 서버 안에서 서비스끼리 구분하는 번호.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">웹소켓</span> : 페이지를 연 뒤에도 연결을 유지하면서 메시지를 주고받는 방식.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">WSS</span> : 웹소켓을 HTTPS처럼 암호화한 주소.</p>
-</div>
+> keyword
+>
+> CI : 코드를 올리면 검사나 배포를 자동으로 이어서 하는 도구.
+>
+> 포트 : 한 서버 안에서 서비스끼리 구분하는 번호.
+>
+> 웹소켓 : 페이지를 연 뒤에도 연결을 유지하면서 메시지를 주고받는 방식.
+>
+> WSS : 웹소켓을 HTTPS처럼 암호화한 주소.
 
 <br>
 
@@ -122,12 +133,13 @@ flowchart LR
 - 실시간 화면과 미디어가 갈라지는 앱은 443에서 출발지를 열어 둔다.
 - 허용 목록이 있는 그 앱도 인증서 검증 경로는 밖에서도 연다.
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">출발지</span> : 요청을 보낸 쪽의 주소.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">내부대역</span> : 회사 안에서만 쓰는 주소 범위.</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">허용 목록</span> : 통과시킬 주소를 적어 둔 명단.</p>
-</div>
+> keyword
+>
+> 출발지 : 요청을 보낸 쪽의 주소.
+>
+> 내부대역 : 회사 안에서만 쓰는 주소 범위.
+>
+> 허용 목록 : 통과시킬 주소를 적어 둔 명단.
 
 <br>
 
@@ -141,10 +153,9 @@ apache2ctl -S
 
 80에서 HTTPS로 보내는 사이트는, 브라우저 기준으로 443 규칙이 실제 전달이다.
 
-<div style="margin:1.35rem 0 1.75rem;padding:0.1rem 0 0.15rem 0.9rem;border-left:2px solid var(--color-strong,#1c1917);">
-<p style="margin:0 0 0.45rem;font-weight:650;letter-spacing:-0.015em;color:var(--color-strong,#1c1917);">keyword</p>
-<p style="margin:0.12rem 0;line-height:1.65;color:var(--color-ink,#44403c);"><span style="font-weight:650;color:var(--color-strong,#1c1917);">가상 호스트</span> : 서버 하나에서 이름별로 나눠 둔 사이트 설정.</p>
-</div>
+> keyword
+>
+> 가상 호스트 : 서버 하나에서 이름별로 나눠 둔 사이트 설정.
 
 <br>
 
