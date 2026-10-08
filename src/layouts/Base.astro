@@ -57,7 +57,7 @@ const fullTitle = title === "JeongKeepsCalm" ? title : `${title} · JeongKeepsCa
           </form>
           {
             ogType === "article" && (
-              <a href="/" class="index-link">글</a>
+              <a href="/" class="index-link">Posts</a>
             )
           }
         </div>
@@ -65,7 +65,10 @@ const fullTitle = title === "JeongKeepsCalm" ? title : `${title} · JeongKeepsCa
       <main class="site-main">
         <slot />
       </main>
-      <footer class="site-footer">JeongKeepsCalm</footer>
+      <footer class="site-footer">
+        <span class="display footer-name">JeongKeepsCalm</span>
+        <p>백엔드와 서버 작업을 적는 기술 블로그.</p>
+      </footer>
     </div>
   </body>
 </html>
