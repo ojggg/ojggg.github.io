@@ -174,8 +174,8 @@ java -jar {배포경로}/애플리케이션.war
 
 <br>
 
-## 주의·제한
+## 정리
 
-「WAR로 올리지만 JAR로 실행」은 팀 안 줄임말로 쓸 수 있다. 문서에서 외장 배포와 나눌 때는 이렇게 적는다. 배포 파일은 WAR다. 서버에 그 파일을 두고 `java -jar`로 JVM이 직접 실행한다. 그 실행이 Spring Boot 내장 Tomcat을 쓴다.
+배포 파일은 WAR다. 서버에 그 파일을 두고 `java -jar`로 JVM이 직접 실행한다. 그 실행이 Spring Boot 내장 Tomcat을 쓴다.
 
 Spring Boot가 외장 Tomcat을 막지는 않는다. 기본은 내장이고, WAR와 provided, 서블릿 초기화 클래스가 있으면 외장도 가능한 조합이다.
