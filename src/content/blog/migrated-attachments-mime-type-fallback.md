@@ -1,5 +1,5 @@
 ---
-title: 이관 첨부파일의 MIME 타입이 전부 octet-stream이었던 이유
+title: 파일의 MIME 타입
 description: 파일 확인 결과가 비어 있으면 첨부의 MIME 타입이 octet-stream으로 채워져, 앱이 이관된 사진을 사진으로 보지 못했다. 확장자로 MIME을 채워 바로잡았다.
 pubDate: 2026-10-14
 ---
